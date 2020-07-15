@@ -1,0 +1,9 @@
+.text-danger
+{
+    color: red;
+    font-family: 10px;
+}
+.d-none
+{
+    display: none;
+}

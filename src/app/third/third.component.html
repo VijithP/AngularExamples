@@ -1,0 +1,15 @@
+<p >third.component</p>
+
+<div  [class]="myClassBinding">1.Setting all classes with binding</div>  &nbsp;&nbsp; << adding class  property binding
+
+<br>
+
+<div>
+    <h4 [class.myClass]="isTrue">This class binding is for true value</h4>
+    <h4 [class.myClass]="!isTrue">This class binding is for false value</h4>
+ </div>
+
+ <br>
+
+ <div  [ngClass]="{ColorRed:true}">1.Setting all classes with binding</div>  &nbsp;&nbsp; << adding ngclass   binding
+

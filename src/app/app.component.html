@@ -1,0 +1,71 @@
+  
+<h1>Example 1 - Loading Component & Interpolation</h1>
+
+<div class="clsExample">
+  <app-first></app-first>
+</div>
+
+
+<h1>Example 2 - Property Binding </h1>
+
+<div class="clsExample">
+  <app-second></app-second>
+</div>
+
+
+<h1>Example 3 - class Binding </h1>
+
+<div class="clsExample">
+  <app-third></app-third>
+</div>
+
+<h1>Example 4 - Style Binding </h1>
+
+<div class="clsExample">
+  <app-fourth></app-fourth>
+</div>
+
+
+<h1>Example 5 - Event Binding </h1>
+
+<div class="clsExample">
+  <app-fifth></app-fifth>
+</div>
+
+<h1>Example 6 - Template Reference Variable </h1>
+
+<div class="clsExample">
+  <app-sixth></app-sixth>
+</div>
+
+<h1>Example 7 - Two way binding </h1>
+
+<div class="clsExample">
+  <app-seventh></app-seventh>
+</div>
+
+
+
+
+<br>
+<br>
+<br>
+
+
+
+
+
+<app-templatedrivenform></app-templatedrivenform>
+
+
+<apps-hellow-world></apps-hellow-world>
+
+<p class="mainHead">hellow-world works!</p>
+<router-outlet></router-outlet>
+
+<mat-form-field>
+  <input matInput [matDatepicker]="picker3" placeholder="Value binding" [value]="date.value">
+  <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+  <mat-datepicker #picker3></mat-datepicker>
+</mat-form-field>
+

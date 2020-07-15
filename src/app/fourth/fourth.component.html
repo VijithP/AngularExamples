@@ -1,0 +1,25 @@
+<p>fourth.component</p>
+<div>
+    <h5 [style.color]="'blue'">This is a Blue Heading</h5>
+</div>
+
+
+<br>
+
+
+<p [style.background-color]="'darkorchid'">
+    Quite something!
+  </p>
+
+
+<span [style.font-size.px]="'isTrue'? 20 : 12">This style binding is set for true value</span>
+<br>
+<span [style.font-size.%]="!'isTrue' ? 120 : 30">This style binding is set for false value</span>
+<br>
+<br>
+
+<div  [ngStyle]="{'font-size.px':24}">1.Setting all Style with binding</div>  &nbsp;&nbsp; << adding ngStyle   binding
+
+
+
+

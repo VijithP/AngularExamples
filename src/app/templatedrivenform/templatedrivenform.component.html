@@ -1,0 +1,103 @@
+
+<div class="page-header" style="color:red"> 
+    <h1>Template Driven Form works!</h1>
+</div>
+
+
+
+<button class="btn btn-sm">First step</button>
+
+<!-- Normal Template -->
+
+<h1>Normal Template</h1>
+<br>
+<form #userForm="ngForm" class="form-control">
+
+    {{userForm.value|json}}
+
+    <br>
+    <label for="" class="form-control">Name</label>
+    <input type="text" id="UserName" name="UserName" ngModel>
+    <br>
+    <label for="">Email</label>
+    <input type="text" class="form-control" name="Email" ngModel>
+
+    <br>
+    <label for="">Age</label>
+    <input type="text" class="form-control" name="Age" ngModel>
+
+</form>
+
+<br>
+<br>
+<h1>Property binding</h1>
+<br>
+
+<form #userFormPro="ngForm" class="form-control">
+
+    {{userModel|json}}
+
+    <br>
+    <label for="" class="form-control">Name</label>
+    <input type="text" id="UserName" name="UserName" [ngModel]="userModel.username">
+
+    <br>
+    <label for="">Email</label>
+    <input type="text" class="form-control" name="Email" [ngModel]="userModel.email">
+
+    <br>
+    <label for="">Age</label>
+    <input type="text" class="form-control" name="Age" [ngModel]="userModel.age">
+
+</form>
+
+<br>
+<br>
+
+<h1>Two way Binding</h1>
+<form #userFormTB="ngForm" (ngSubmit)="onSubmit()"  >
+
+
+    form validation =={{userFormTB.form.valid}}
+<br>
+<br>
+
+
+    {{userModel|json}}
+    <br>
+    <br>
+    <label for="" class="form-control">Name</label>
+    <input type="text" required #name="ngModel" id="UserName" name="UserName" [(ngModel)]="userModel.username">
+    <br>
+    <small class="text-danger" [class.d-none]="name.valid || name.untouched">UserName is Required</small>
+
+    <br>
+    <label for="">Email</label>
+    <input type="text" class="form-control" name="Email" [(ngModel)]="userModel.email">
+
+    <br>
+    <br>
+    <label for="">Age</label>
+    <input type="text" class="form-control" name="Age" [(ngModel)]="userModel.age">
+    <br>
+    <br>
+    <label for="">Qualification</label>
+    <select name="qualification" [(ngModel)]="userModel.qualification">
+        <option>Select Highest Qualification</option>
+        <option>SSLC</option>
+        <option>PlusTwo</option>
+
+    </select>
+
+    <br>
+    <br>
+
+    <label>Marital Status</label>
+    <input type="checkbox" name="maritalstatus" [(ngModel)]="userModel.maritalstatus"/>
+<br>
+<br>
+<button [disabled]="userFormTB.form.invalid" class="btn btn-primary btn-sm">Submit</button>
+
+
+
+</form>
